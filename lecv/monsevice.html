@@ -1,0 +1,47 @@
+gps-tracking-rdc/
+│
+├── backend/                # Serveur Node.js + API REST
+│   ├── src/
+│   │   ├── controllers/     # Logique métier (ex: arrets, trajets, véhicules)
+│   │   ├── models/          # Schémas Mongoose ou Sequelize
+│   │   ├── routes/          # API REST (GET /trajet, POST /position, etc.)
+│   │   ├── services/        # Services de calcul (géofence, distance, arrêt)
+│   │   ├── middlewares/     # Authentification, validation
+│   │   ├── utils/           # Fonctions utiles (ex: distance GPS)
+│   │   └── app.js           # Point d’entrée Express
+│   ├── .env                 # Config (BD, clés API)
+│   └── package.json
+│
+├── database/
+│   ├── mongodb/             # Script d'initialisation MongoDB (positions, users)
+│   └── postgresql/          # SQL pour abonnements, paiements, logs
+│
+├── mobile-app/             # App Android (Flutter ou React Native)
+│   ├── lib/                 # Écrans, composants, cartes
+│   ├── assets/              # Icônes, images
+│   ├── pubspec.yaml         # Dépendances Flutter
+│   └── main.dart            # Point d’entrée de l’app
+│
+├── web-dashboard/          # (Optionnel) Dashboard Admin en React
+│   ├── src/
+│   │   ├── pages/           # Pages (Tableau, Carte, Login)
+│   │   ├── components/      # Graphiques, Cartes, Listes
+│   │   └── App.jsx
+│   ├── public/
+│   └── package.json
+│
+├── traceur-gps-config/     # Configuration des traceurs physiques
+│   ├── gt06n/               # Paramètres IP, port, APN RDC
+│   └── docs/                # Manuels + scripts de test
+│
+├── docs/                   # Documentation technique
+│   ├── plan-de-dev.md       # Étapes et modules
+│   ├── modèle-données.md    # Schémas Mongo et SQL
+│   └── api-doc.md           # Spécification des endpoints REST
+│
+├── deployment/             # Déploiement en cloud (Render, Railway, VPS)
+│   ├── docker/              # Dockerfiles si besoin
+│   ├── nginx/               # Reverse proxy config
+│   └── hosting.md
+│
+└── README.md               # Résumé du projet
