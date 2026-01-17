@@ -1,77 +1,68 @@
-/* Général */
+/* General */
 body {
     font-family: Arial, Helvetica, sans-serif;
     background-color: rgb(167, 219, 219);
     margin: 0;
-
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    /* centre les cartes horizontalement */
-    gap: 2rem;
 }
 
 /* Navigation */
 nav {
+    background-color: #eee;
     padding: 1rem;
 }
 
 nav a {
-    margin-right: 1rem;
+    display: block;
+    padding: 0.5rem;
     color: #d61717;
     text-decoration: none;
 }
 
-/* Main layout */
-
-.card {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    /* centre horizontalement */
-    width: 20rem;
-    background-color: #eee;
-    border: 1px solid rgba(0, 0, 0, 0.2);
-    padding: 1rem;
-    text-align: center;
-
-}
-
-/* Images */
-.card img {
-    width: 150px;
-    height: auto;
-    margin-bottom: 1rem;
-    box-shadow: #d61717;
-
-}
-
+/* Main */
 main {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    /* centre les cartes horizontalement */
-    gap: 2rem;
+    max-width: 840px;
+    margin: 1rem auto;
 }
 
-/* Titres */
+/* Heading */
 h1 {
     color: rgb(29, 8, 218);
 }
 
-h2 {
-    margin-top: 0;
+/* Profile image */
+main img {
+    width: 150px;
+    height: auto;
+    border: 1px solid #000;
+    padding: 3px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
 }
 
-/* Paragraphes */
+/* Aside */
+aside {
+    width: 20rem;
+    margin: 1rem auto;
+    border: 1px solid rgb(0 0 0 / 0.2);
+    padding: 1rem;
+    background-color: #eee;
+    color: #333;
+    text-align: center;
+}
+
+/* Aside image */
+aside img {
+    width: 200px;
+    height: auto;
+}
+
+/* Paragraph */
 p {
-    text-align: left;
-    font-size: 0.9rem;
+    padding: 0;
 }
 
 /* Footer */
 footer {
+    margin-top: 15px;
     border-top: 1px solid #000;
     text-align: center;
-    padding: 1rem;
 }
