@@ -1,41 +1,77 @@
-/* Limiter la largeur de main */
-main {
-    max-width: 840px;
-    margin: 0 auto;
+/* Général */
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    background-color: rgb(167, 219, 219);
+    margin: 0;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    /* centre les cartes horizontalement */
+    gap: 2rem;
 }
 
-/* Styliser l'élément aside */
-aside {
-    width: 20rem;
-    margin: 1rem;
-    border: 1px solid rgb(0 0 0 / 0.2);
-    /* Bordure subtile */
+/* Navigation */
+nav {
     padding: 1rem;
+}
+
+nav a {
+    margin-right: 1rem;
+    color: #d61717;
+    text-decoration: none;
+}
+
+/* Main layout */
+
+.card {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    /* centre horizontalement */
+    width: 20rem;
     background-color: #eee;
-    color: #333;
+    border: 1px solid rgba(0, 0, 0, 0.2);
+    padding: 1rem;
     text-align: center;
+
 }
 
-/* Style de l'image dans aside */
-aside img {
-    width: 200px;
-    height: auto;
-}
-
-/* Profil de l'image dans main (si tu en as une différente) */
-main img {
+/* Images */
+.card img {
     width: 150px;
     height: auto;
+    margin-bottom: 1rem;
+    box-shadow: #d61717;
+
 }
 
-/* Style du paragraphe */
+main {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    /* centre les cartes horizontalement */
+    gap: 2rem;
+}
+
+/* Titres */
+h1 {
+    color: rgb(29, 8, 218);
+}
+
+h2 {
+    margin-top: 0;
+}
+
+/* Paragraphes */
 p {
-    padding: 0;
+    text-align: left;
+    font-size: 0.9rem;
 }
 
-/* Footer - ajouter marge, bordure et centrer le texte */
+/* Footer */
 footer {
-    margin-top: 15px;
     border-top: 1px solid #000;
     text-align: center;
+    padding: 1rem;
 }
