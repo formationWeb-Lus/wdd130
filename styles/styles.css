@@ -1,0 +1,41 @@
+/* Limiter la largeur de main */
+main {
+    max-width: 840px;
+    margin: 0 auto;
+}
+
+/* Styliser l'élément aside */
+aside {
+    width: 20rem;
+    margin: 1rem;
+    border: 1px solid rgb(0 0 0 / 0.2);
+    /* Bordure subtile */
+    padding: 1rem;
+    background-color: #eee;
+    color: #333;
+    text-align: center;
+}
+
+/* Style de l'image dans aside */
+aside img {
+    width: 200px;
+    height: auto;
+}
+
+/* Profil de l'image dans main (si tu en as une différente) */
+main img {
+    width: 150px;
+    height: auto;
+}
+
+/* Style du paragraphe */
+p {
+    padding: 0;
+}
+
+/* Footer - ajouter marge, bordure et centrer le texte */
+footer {
+    margin-top: 15px;
+    border-top: 1px solid #000;
+    text-align: center;
+}
