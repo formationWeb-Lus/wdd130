@@ -11,7 +11,7 @@ aside {
     /* Largeur de l'aside */
     margin: 1rem;
     /* Marge autour de l'aside */
-    border: 1px solid rgb(0 0 0 / 0.2);
+    border: 1px solid rgba(0 0 0 / 0.2);
     /* Bordure subtile */
     padding: 1rem;
     /* Rembourrage à l'intérieur */
