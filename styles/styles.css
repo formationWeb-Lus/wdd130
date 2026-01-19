@@ -54,3 +54,60 @@ footer {
     text-align: center;
     /* Centrage du texte dans le footer */
 }
+
+
+/* Navigation */
+nav {
+    background-color: #eee;  /* Choisis une couleur de fond */
+    padding: 1rem;            /* Ajoute un peu de padding */
+}
+
+nav a {
+    color: #d61717;           /* Choisis une couleur pour le texte des liens */
+    padding: 0.5rem;          /* Ajoute un padding */
+    display: block;           /* Fais en sorte que les liens soient des blocs */
+}
+
+/* Titre h1 */
+h1 {
+    color: rgb(29, 8, 218);  /* Choisis une couleur pour ton titre */
+}
+
+/* Image dans la section main */
+main img {
+    width: 150px;            /* Largeur de l'image */
+    height: auto;            /* Hauteur automatique pour maintenir la proportion */
+    border: 2px solid #ddd;  /* Bordure autour de l'image */
+    padding: 0.5rem;         /* Padding autour de l'image */
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);  /* Ombre autour de l'image */
+}
+
+/* Section aside */
+aside {
+    width: 20rem;
+    margin: 1rem;
+    border: 1px solid rgb(0 0 0 / 0.2);
+    padding: 1rem;
+    background-color: #eee;
+    color: #333;
+    text-align: center;
+}
+
+/* Image dans aside */
+aside img {
+    width: 200px;
+    height: auto;
+}
+
+/* Paragraphe */
+p {
+    padding: 0;
+}
+
+/* Footer */
+footer {
+    margin-top: 15px;
+    border-top: 1px solid #000;
+    text-align: center;
+}
+
