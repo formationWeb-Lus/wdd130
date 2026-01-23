@@ -1,14 +1,65 @@
-/* General */
-body {
-    font-family: Arial, Helvetica, sans-serif;
-    background-color: rgb(167, 219, 219);
-    margin: 0;
+/* Limite la largeur du main */
+main {
+    max-width: 840px;
+    margin: 0 auto;
+    /* Centrage horizontal */
 }
+
+/* Style pour la section aside */
+aside {
+    width: 20rem;
+    /* Largeur de l'aside */
+    margin: 1rem;
+    /* Marge autour de l'aside */
+    border: 1px solid rgba(0 0 0 / 0.2);
+    /* Bordure subtile */
+    padding: 1rem;
+    /* Rembourrage à l'intérieur */
+    background-color: #eee;
+    /* Fond clair */
+    color: #333;
+    /* Couleur du texte */
+    text-align: center;
+    /* Centrer le texte */
+}
+
+/* Style pour les images dans le aside */
+aside img {
+    width: 200px;
+    /* Largeur de l'image dans le aside */
+    height: auto;
+    /* Hauteur auto pour garder la proportion */
+}
+
+/* Style spécifique à l'image dans main */
+main img {
+    width: 150px;
+    /* Largeur de l'image de profil */
+    height: auto;
+    /* Hauteur auto pour garder la proportion */
+}
+
+/* Style pour les paragraphes */
+p {
+    padding: 0;
+    /* Enlève le padding du paragraphe */
+}
+
+/* Style pour le footer */
+footer {
+    margin-top: 15px;
+    /* Marge supérieure pour séparer du contenu principal */
+    border-top: 1px solid #000;
+    /* Bordure supérieure */
+    text-align: center;
+    /* Centrage du texte dans le footer */
+}
+
 
 /* Navigation */
 nav {
-    background-color: #eee;
-    padding: 1rem;
+    background-color: #eee;  /* Choisis une couleur de fond */
+    padding: 1rem;            /* Ajoute un peu de padding */
 }
 
 :root {
@@ -54,36 +105,29 @@ nav {
 }
 
 nav a {
-    display: block;
-    padding: 0.5rem;
-    color: #d61717;
-    text-decoration: none;
+    color: #d61717;           /* Choisis une couleur pour le texte des liens */
+    padding: 0.5rem;          /* Ajoute un padding */
+    display: block;           /* Fais en sorte que les liens soient des blocs */
 }
 
-/* Main */
-main {
-    max-width: 840px;
-    margin: 1rem auto;
-}
-
-/* Heading */
+/* Titre h1 */
 h1 {
-    color: rgb(29, 8, 218);
+    color: rgb(29, 8, 218);  /* Choisis une couleur pour ton titre */
 }
 
-/* Profile image */
+/* Image dans la section main */
 main img {
-    width: 150px;
-    height: auto;
-    border: 1px solid #000;
-    padding: 3px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+    width: 150px;            /* Largeur de l'image */
+    height: auto;            /* Hauteur automatique pour maintenir la proportion */
+    border: 2px solid #ddd;  /* Bordure autour de l'image */
+    padding: 0.5rem;         /* Padding autour de l'image */
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);  /* Ombre autour de l'image */
 }
 
-/* Aside */
+/* Section aside */
 aside {
     width: 20rem;
-    margin: 1rem auto;
+    margin: 1rem;
     border: 1px solid rgb(0 0 0 / 0.2);
     padding: 1rem;
     background-color: #eee;
@@ -91,13 +135,13 @@ aside {
     text-align: center;
 }
 
-/* Aside image */
+/* Image dans aside */
 aside img {
     width: 200px;
     height: auto;
 }
 
-/* Paragraph */
+/* Paragraphe */
 p {
     padding: 0;
 }
@@ -108,3 +152,4 @@ footer {
     border-top: 1px solid #000;
     text-align: center;
 }
+
