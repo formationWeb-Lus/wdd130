@@ -1,17 +1,12 @@
 /* ===============================
-   CSS VARIABLES (COLOR SCHEME)
+   CSS VARIABLES
 ================================ */
 :root {
     --primary-color: #eef6f4;
-    /* deep river green */
     --secondary-color: #e9c46a;
-    /* warm sand */
     --accent-color: #012723;
-    /* teal water */
     --dark-color: #101213;
-    /* dark slate */
     --light-color: #f4f4f4;
-
     --heading-font: "Poppins", sans-serif;
     --body-font: "Open Sans", sans-serif;
 }
@@ -23,230 +18,155 @@
 }
 
 /* ===============================
-           BODY
-        ================================ */
+   BODY
+================================ */
 body {
     font-family: var(--body-font);
     color: var(--dark-color);
     background-color: var(--light-color);
-
-}
-
-/* Header déjà fixe */
-header {
-    background-color: var(--primary-color);
-    position: fixed;
-    width: 100%;
-    height: 15%;
-    display: flex;
-    align-items: center;
-    padding: 0 120px;
-    z-index: 10;
-    /* supérieur à tout le reste */
-}
-
-header img {
-    width: 70px;
-    padding: 0;
-    /* ✅ */
 }
 
 /* ===============================
-   NAVIGATION
+   HEADER
 ================================ */
+header {
+    background-color: var(--primary-color);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 10px 40px;
+    height: 80px;
+}
+
+header .logo img {
+    width: 70px;
+}
+
 nav ul {
     list-style: none;
     display: flex;
-    gap: 24px;
-    margin-left: auto;
-}
-
-nav {
-    margin-left: auto;
-    /* ✅ pousse le menu à droite */
+    gap: 20px;
 }
 
 nav a {
-    color: #1206f4;
-    font-weight: 600;
     text-decoration: none;
-    padding: 10px 10px;
-    transition: background-color 0.3s;
-    font-size: 17px;
-
+    color: var(--accent-color);
+    font-weight: 600;
 }
 
-nav a:hover {
-    background-color: var(--accent-color);
-    border-radius: 4px;
+/* ===============================
+   HERO
+================================ */
+.hero {
+    position: relative;
+    width: 100%;
+    height: 650px;
+    overflow: hidden;
 }
 
 .hero img {
     width: 100%;
-    height: 650px;
+    height: 100%;
     object-fit: cover;
     display: block;
-    padding: 30px 1px 180px 30px;
 }
 
-main p {
-    margin: 16px 0;
-}
-
-/* Hero Title Overlay */
 .hero h1 {
     position: absolute;
-    top: 78%;
+    top: 1px;
     width: 100%;
     text-align: center;
-    background-color: rgba(12, 46, 36, 0.85);
-    color: #ffffff;
+    background-color: rgba(1, 39, 35, 0.8);
+    color: #fff;
     padding: 15px;
     font-size: 2.5rem;
 }
 
-.history {
-    padding: 48px 32px;
-    background-color: #ffffff;
-    border-radius: 8px;
-    margin-bottom: 48px;
-}
-
-.history h2,
-.history h3 {
+.hero article {
+    position: absolute;
+    bottom: 30px;
+    left: 50%;
+    transform: translateX(-50%);
+    background-color: rgba(244, 244, 244, 0.85);
+    padding: 20px;
+    border-radius: 10px;
+    max-width: 500px;
     text-align: center;
-    margin-bottom: 16px;
 }
 
-/* CONTENEUR DES CARTES */
-.history-cards {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    gap: 32px;
-    margin-top: 32px;
-
-}
-
-/* CHAQUE CARTE */
-.history-card {
-    background-color: rgba(232, 239, 237, 0.85);
-    border-radius: 8px;
-    padding: 1px 2px 1px 1px;
-    text-align: center;
-    box-shadow: 0 0 30px #012723;
-
-}
-
-/* IMAGE */
-.history-card img {
-    width: 400px;
-    border-radius: 6px;
-    margin-bottom: 12px;
-
-}
-
-/* TEXTE */
-.history h2 {
-    margin-bottom: 8px;
-    background-color: #012723;
-    color: var(--light-color);
-    height: 60px;
-    padding: 10px 20px;
-}
-
-.history-card p {
-    font-size: 0.95rem;
-    line-height: 1.5;
-
-}
-
-.history h3 {
-    font-size: 30px;
-    font-family: sans-serif;
-}
-
-@media (max-width: 900px) {
-    .history-cards {
-        grid-template-columns: repeat(2, 1fr);
-    }
-}
-
-@media (max-width: 600px) {
-    .history-cards {
-        grid-template-columns: 1fr;
-    }
+.hero article img {
+    float: right;
+    width: 120px;
+    margin-left: 15px;
+    border-radius: 5px;
 }
 
 /* ===============================
-   ADVENTURE SECTION - 3 CARDS
+   SECTIONS
 ================================ */
-
-.adventure {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    /* 3 cartes */
-    gap: 32px;
-    padding: 48px 32px;
-    background-color: #ffffff;
-    margin-bottom: 48px;
+section {
+    padding: 50px 20px;
+    max-width: 1000px;
+    margin: 0 auto 40px auto;
 }
 
-/* CHAQUE CARTE */
-.adventure figure {
-    background-color: #f9f9f9;
-    border-radius: 8px;
-    overflow: hidden;
+section h2 {
+    font-family: var(--heading-font);
+    color: var(--accent-color);
     text-align: center;
-    padding-bottom: 16px;
+    margin-bottom: 20px;
 }
 
-/* IMAGE */
-.adventure img {
-    width: 100%;
-    height: auto;
-    display: block;
-    box-shadow: 0 0 50px #0a025e;
-}
-
-/* TEXTE */
-.adventure figcaption,
-.adventure h2 {
-    margin-top: 12px;
+section p {
     font-size: 1rem;
+    line-height: 1.5;
+    text-align: center;
+}
+
+section figure {
+    text-align: center;
+    margin: 20px;
+}
+
+section figure img {
+    width: 100%;
+    max-width: 300px;
+    border-radius: 8px;
+}
+
+section h2 {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+/* Section Adventure: figures en ligne */
+section figure {
+    display: inline-block;
+    /* ou flex si tu veux plus de contrôle */
+    margin: 0 15px;
+    /* espace entre les images */
+    text-align: center;
+    vertical-align: top;
+    /* pour aligner les images en haut */
+}
+
+section figure img {
+    width: 250px;
+    /* ou 30% si tu veux responsive */
+    height: auto;
+    border-radius: 8px;
+}
+
+section figure figcaption {
+    margin-top: 8px;
     font-weight: 600;
 }
 
-@media (max-width: 900px) {
-    .adventure {
-        grid-template-columns: repeat(2, 1fr);
+@media (max-width: 768px) {
+    section figure {
+        display: block;
+        margin: 20px auto;
     }
-}
-
-@media (max-width: 600px) {
-    .adventure {
-        grid-template-columns: 1fr;
-    }
-}
-
-.contact img {
-    width: 100%;
-    box-shadow: 0 0 30px;
-    padding: 80px 80px;
-}
-
-.contact article {
-    position: absolute;
-    top: 350%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    background-color: #f5f0f0;
-    padding: 24px;
-    border-radius: 12px;
-    box-shadow: 0 0 50px rgba(0, 0, 0, 0.1);
-    max-width: 500px;
-    width: 90%;
-
-    /* plus bas que le header */
 }
 
 /* ===============================
@@ -254,105 +174,56 @@ main p {
 ================================ */
 footer {
     background-color: var(--primary-color);
-    color: #0c0101;
     text-align: center;
-    padding: 32px 20px;
-    border-top: 2px solid var(--accent-color);
+    padding: 40px 20px;
     display: flex;
     flex-direction: column;
     align-items: center;
-    gap: 16px;
+    gap: 20px;
 }
 
-/* Texte du footer */
 footer p {
-    margin: 0;
     font-size: 14px;
     font-weight: 500;
 }
 
-/* Liens des réseaux sociaux */
-footer .social-links {
+footer .socialmedia {
     display: flex;
-    gap: 16px;
+    gap: 15px;
 }
 
-/* Images des réseaux sociaux */
-footer .social-links a img {
+footer .socialmedia a img {
     width: 32px;
     height: 32px;
-    transition: transform 0.3s, filter 0.3s;
-}
-
-/* Effet au survol */
-footer .social-links a:hover img {
-    transform: scale(1.2);
-    filter: brightness(1.2);
-}
-
-/* Footer responsive */
-@media (max-width: 768px) {
-    footer {
-        padding: 24px 12px;
-    }
-
-    footer .social-links {
-        gap: 12px;
-    }
-
-    footer .social-links a img {
-        width: 28px;
-        height: 28px;
-    }
 }
 
 /* ===============================
-   RESPONSIVE HEADER & NAVIGATION
+   RESPONSIVE
 ================================ */
-@media (max-width: 900px) {
-    header {
-        padding: 0 40px;
-        /* réduire le padding sur tablettes */
-        height: auto;
-        flex-direction: column;
-        align-items: flex-start;
-        gap: 10px;
+@media (max-width: 768px) {
+    .hero article {
+        width: 90%;
+        bottom: 20px;
     }
 
-    nav ul {
-        flex-direction: column;
-        width: 100%;
-        gap: 12px;
-        margin-left: 0;
-        /* reset le push à droite */
-    }
-
-    nav a {
-        font-size: 16px;
-        /* réduire légèrement la taille */
-        padding: 8px 12px;
-        display: block;
+    section figure img {
+        max-width: 250px;
     }
 }
 
-@media (max-width: 600px) {
-    header {
-        padding: 0 20px;
-        /* encore moins sur les petits écrans */
-    }
-
+@media (max-width: 480px) {
     nav ul {
         flex-direction: column;
-        gap: 8px;
+        gap: 10px;
     }
 
-    nav a {
-        font-size: 14px;
-        padding: 6px 10px;
+    .hero h1 {
+        font-size: 2rem;
     }
 
-    header img {
-        width: 50px;
-        /* réduire logo */
+    .hero article img {
+        float: none;
+        display: block;
+        margin: 10px auto;
     }
 }
