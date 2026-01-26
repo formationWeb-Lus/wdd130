@@ -1,14 +1,12 @@
-/* ===============================
-   CSS VARIABLES
-================================ */
 :root {
+    --heading-font: "Times New Roman", Georgia, serif;
+    --body-font: Arial, Helvetica, sans-serif;
     --primary-color: #eef6f4;
     --secondary-color: #e9c46a;
+    /* ou supprimer si inutilisée */
     --accent-color: #012723;
     --dark-color: #101213;
     --light-color: #f4f4f4;
-    --heading-font: "Poppins", sans-serif;
-    --body-font: "Open Sans", sans-serif;
 }
 
 * {
@@ -130,8 +128,8 @@ section figure {
 
 section figure img {
     width: 100%;
-    max-width: 300px;
-    border-radius: 8px;
+    max-width: 250px;
+    height: auto;
 }
 
 section h2 {
