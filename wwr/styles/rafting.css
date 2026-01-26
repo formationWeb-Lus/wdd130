@@ -3,8 +3,6 @@
 ================================ */
 :root {
     --primary-color: #eef6f4;
-    --secondary-color: #e9c46a;
-    /* défini mais peut être utilisé plus tard */
     --accent-color: #012723;
     --dark-color: #101213;
     --light-color: #f4f4f4;
@@ -129,6 +127,8 @@ section p {
     font-size: 1rem;
     line-height: 1.5;
     text-align: center;
+    color: var(--secondary-color);
+    /* utilise la variable maintenant */
 }
 
 /* Figures en ligne pour l'aventure */
