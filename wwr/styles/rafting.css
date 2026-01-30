@@ -13,7 +13,9 @@
 /* =============================== 
    UNIVERSAL RESET
 ================================ */
-* {
+*,
+*::before,
+*::after {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
@@ -37,7 +39,6 @@ body {
 header {
     display: grid;
     grid-template-columns: auto 1fr;
-    /* logo | nav */
     align-items: center;
     padding: 10px 40px;
     background-color: var(--primary-color);
@@ -113,20 +114,12 @@ nav a {
 /* =============================== 
    SECTIONS
 ================================ */
-/* ===============================
-   ADVENTURES SECTION
-================================ */
-
 section h2 {
     font-family: var(--heading-font);
     color: var(--accent-color);
     text-align: center;
     margin-bottom: 20px;
     font-size: 2rem;
-}
-
-.adventures h2 {
-    text-align: center;
 }
 
 section p {
@@ -138,40 +131,34 @@ section p {
     margin: 0 auto;
 }
 
-/* Section Adventures */
+/* =============================== 
+   ADVENTURES SECTION
+================================ */
 .adventures {
     display: flex;
     flex-direction: column;
-    /* titre au-dessus, cartes en dessous */
+    /* titre au-dessus */
     align-items: center;
     gap: 20px;
     padding: 20px 0;
 }
 
-.adventures h2 {
-    font-family: var(--heading-font);
-    color: var(--accent-color);
-    text-align: center;
-    font-size: 2rem;
-    margin-bottom: 20px;
-}
-
 .adventure-cards {
     display: flex;
-    flex-wrap: wrap;
-    /* permet aux cartes de passer sur plusieurs lignes sur petit écran */
+    flex-wrap: nowrap;
+    /* une seule ligne, pas de wrap */
     justify-content: center;
     gap: 20px;
 }
 
 .adventure-cards figure {
-    background-color: #eef6f4;
+    background-color: var(--primary-color);
     border-radius: 10px;
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
     padding: 10px;
     text-align: center;
-    flex: 1 1 180px;
-    /* largeur min 180px, peut grandir */
+    flex: 0 0 180px;
+    /* fixe largeur pour toutes les cartes */
     max-width: 220px;
     transition: transform 0.3s, box-shadow 0.3s;
 }
@@ -192,7 +179,7 @@ section p {
 .adventure-cards figure figcaption {
     font-weight: 600;
     font-size: 1rem;
-    color: #012723;
+    color: var(--accent-color);
 }
 
 /* =============================== 
@@ -224,11 +211,10 @@ footer .socialmedia a img {
 }
 
 /* =============================== 
-   FOOTER FIXED BOTTOM (optionnel)
+   PUSH FOOTER DOWN
 ================================ */
 body > main {
     flex: 1;
-    /* pousse le footer en bas si le contenu est petit */
 }
 
 /* =============================== 
@@ -240,7 +226,7 @@ body > main {
         bottom: 20px;
     }
 
-    section.adventures figure img {
+    .adventure-cards figure img {
         max-width: 200px;
     }
 }
@@ -261,7 +247,14 @@ body > main {
         margin: 10px auto;
     }
 
-    section.adventures figure {
+    .adventure-cards {
+        flex-wrap: wrap;
+        /* permet à toutes les cartes de passer sur plusieurs lignes */
+        gap: 10px;
+    }
+
+    .adventure-cards figure {
         flex: 1 1 100%;
+        max-width: none;
     }
 }
