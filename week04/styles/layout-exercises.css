@@ -17,11 +17,21 @@ div {
 }
 
 .one {
+    display: flex;
+    justify-content: center;
     width: 200px;
     height: 200px;
+
+}
+
+.one p {
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 .flex {
+
     background-color: #aba;
     /* write declarations here */
 
@@ -35,6 +45,10 @@ div {
 
 .container2 {
     /* write declarations here */
+    display: grid;
+    grid-template-columns: 8rem;
+    display: flex;
+    justify-content: space-around;
 
 }
 
@@ -45,12 +59,13 @@ div {
 
 .container3 {
     /* write declarations here */
-
+    display: grid;
+    grid-template-columns: repeat(3 1fr);
 }
 
 .columns-3 {
     /* write declaration here */
-
+    grid-column: span 3;
 }
 
 .three {
