@@ -113,51 +113,86 @@ nav a {
 /* =============================== 
    SECTIONS
 ================================ */
-section {
-    padding: 50px 20px;
-    max-width: 1000px;
-    margin: 0 auto 40px auto;
-}
+/* ===============================
+   ADVENTURES SECTION
+================================ */
 
 section h2 {
     font-family: var(--heading-font);
     color: var(--accent-color);
     text-align: center;
     margin-bottom: 20px;
+    font-size: 2rem;
+}
+
+.adventures h2 {
+    text-align: center;
 }
 
 section p {
-    font-size: 1rem;
-    line-height: 1.5;
+    font-size: 1.1rem;
+    line-height: 1.6;
     text-align: center;
     color: var(--dark-color);
+    max-width: 700px;
+    margin: 0 auto;
 }
 
-/* =============================== 
-   ADVENTURES SECTION
-================================ */
-section.adventures {
+/* Section Adventures */
+.adventures {
+    display: flex;
+    flex-direction: column;
+    /* titre au-dessus, cartes en dessous */
+    align-items: center;
+    gap: 20px;
+    padding: 20px 0;
+}
+
+.adventures h2 {
+    font-family: var(--heading-font);
+    color: var(--accent-color);
+    text-align: center;
+    font-size: 2rem;
+    margin-bottom: 20px;
+}
+
+.adventure-cards {
     display: flex;
     flex-wrap: wrap;
+    /* permet aux cartes de passer sur plusieurs lignes sur petit écran */
     justify-content: center;
     gap: 20px;
 }
 
-section.adventures figure {
-    flex: 1 1 200px;
+.adventure-cards figure {
+    background-color: #eef6f4;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    padding: 10px;
     text-align: center;
+    flex: 1 1 180px;
+    /* largeur min 180px, peut grandir */
+    max-width: 220px;
+    transition: transform 0.3s, box-shadow 0.3s;
 }
 
-section.adventures figure img {
+.adventure-cards figure:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 12px rgba(0, 0, 0, 0.2);
+}
+
+.adventure-cards figure img {
     width: 100%;
-    max-width: 250px;
-    height: auto;
+    height: 150px;
+    object-fit: cover;
     border-radius: 8px;
+    margin-bottom: 10px;
 }
 
-section.adventures figure figcaption {
-    margin-top: 8px;
+.adventure-cards figure figcaption {
     font-weight: 600;
+    font-size: 1rem;
+    color: #012723;
 }
 
 /* =============================== 
