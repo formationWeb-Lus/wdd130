@@ -12,6 +12,7 @@ body {
     font-family: Arial, Helvetica, sans-serif;
     line-height: 1.6;
     color: #333;
+    background-color: #ffffff;
 }
 
 img {
@@ -42,13 +43,14 @@ header img {
 }
 
 .navigation a {
-    color: white;
+    color: #ffffff;
+    /* WCAG contrast fixed */
     text-decoration: none;
     font-weight: bold;
 }
 
-.navigation a.active,
-.navigation a:hover {
+.navigation a:hover,
+.navigation a.active {
     text-decoration: underline;
 }
 
@@ -69,35 +71,47 @@ header img {
 }
 
 /* ==================================================
-   COMPANY INFORMATION + MAP
+   COMPANY INFORMATION + MAP (PARALLEL CARDS)
    ================================================== */
 
 .company-info {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 2rem;
-    align-items: start;
     margin-bottom: 3rem;
 }
 
-.company-info p {
+.company-cards {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 2rem;
+    align-items: stretch;
+}
+
+.info-card,
+.map-card {
+    background-color: #f8f9fa;
+    border-radius: 10px;
+    padding: 1.5rem;
+}
+
+.info-card p {
     margin-bottom: 1rem;
 }
 
-.company-info iframe {
+.map-card iframe {
     width: 100%;
-    height: 300px;
+    height: 100%;
+    min-height: 300px;
     border: none;
+    border-radius: 8px;
 }
 
 @media (max-width: 768px) {
-    .company-info {
+    .company-cards {
         grid-template-columns: 1fr;
     }
 }
 
 /* ==================================================
-   EMPLOYEES SECTION (HORIZONTAL, SAME LEVEL)
+   EMPLOYEES SECTION (HORIZONTAL & ALIGNED)
    ================================================== */
 
 .employees {
@@ -186,11 +200,12 @@ legend {
 
 button[type="submit"] {
     background-color: #005f73;
-    color: white;
+    color: #ffffff;
     border: none;
     padding: 0.8rem;
     font-size: 1rem;
     cursor: pointer;
+    border-radius: 6px;
 }
 
 button[type="submit"]:hover {
@@ -207,7 +222,7 @@ footer {
     align-items: center;
     padding: 1.5rem 2rem;
     background-color: #003049;
-    color: white;
+    color: #ffffff;
 }
 
 footer p {
