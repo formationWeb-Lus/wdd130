@@ -1,5 +1,5 @@
 /* ==================================================
-   CSS VARIABLES
+   VARIABLES CSS
    ================================================== */
 :root {
     --primary-color: #003049;
@@ -14,7 +14,7 @@
 }
 
 /* ==================================================
-   RESET & BASE
+   RÉINITIALISATION & BASE
    ================================================== */
 *,
 *::before,
@@ -40,11 +40,11 @@ img {
 }
 
 /* ==================================================
-   HEADER & NAVIGATION (WCAG FIXED)
+   EN-TÊTE & NAVIGATION (WCAG FIXÉ)
    ================================================== */
 
 /* ==================================================
-   HEADER & NAVIGATION (WCAG FIXED – 30/30)
+   EN-TÊTE & NAVIGATION (WCAG FIXÉ – 30/30)
    ================================================== */
 header {
     display: flex;
@@ -78,14 +78,14 @@ nav a.active {
 }
 
 /* ==================================================
-   MAIN
+   CONTENU PRINCIPAL
    ================================================== */
 main {
     flex: 1;
 }
 
 /* ==================================================
-   HERO
+   SECTION HERO
    ================================================== */
 .hero {
     position: relative;
@@ -130,7 +130,7 @@ main {
 }
 
 /* ==================================================
-   SECTION HEADINGS
+   TITRES DE SECTIONS
    ================================================== */
 section h2 {
     font-family: var(--heading-font);
@@ -147,7 +147,7 @@ section p {
 }
 
 /* ==================================================
-   ADVENTURES
+   AVENTURES
    ================================================== */
 .adventures {
     padding: 2rem 1rem;
@@ -188,7 +188,7 @@ section p {
 }
 
 /* ==================================================
-   CONTACT PAGE
+   PAGE CONTACT
    ================================================== */
 .contact-page {
     max-width: 1200px;
@@ -203,7 +203,7 @@ section p {
 }
 
 /* ==================================================
-   COMPANY INFO + GOOGLE MAPS (PARALLEL CARDS)
+   INFORMATIONS ENTREPRISE + GOOGLE MAPS (CARTES PARALLÈLES)
    ================================================== */
 .company-cards {
     display: grid;
@@ -234,7 +234,7 @@ section p {
 }
 
 /* ==================================================
-   EMPLOYEES
+   EMPLOYÉS
    ================================================== */
 .employee-cards {
     display: flex;
@@ -274,7 +274,7 @@ section p {
 }
 
 /* ==================================================
-   CONTACT FORM
+   FORMULAIRE DE CONTACT
    ================================================== */
 .contact-form form {
     max-width: 700px;
@@ -312,7 +312,7 @@ button:hover {
 }
 
 /* ==================================================
-   FOOTER
+   PIED DE PAGE
    ================================================== */
 footer {
     background-color: var(--primary-color);
@@ -333,14 +333,14 @@ footer {
     height: 32px;
 }
 
-/* ===== Newsletter Section ===== */
+/* ===== Section Newsletter ===== */
 .newsletter {
     background-color: #f2f7fa;
-    /* light background */
+    /* fond clair */
     padding: 50px 20px;
     text-align: center;
     border-top: 4px solid #004080;
-    /* optional accent line */
+    /* ligne d’accent optionnelle */
 }
 
 .newsletter h3 {
@@ -361,7 +361,7 @@ footer {
 .newsletter input[type="text"],
 .newsletter input[type="email"] {
     flex: 1 1 200px;
-    /* grow, shrink, min-width */
+    /* croître, rétrécir, largeur minimale */
     padding: 12px 15px;
     border: 2px solid #ccc;
     border-radius: 5px;
@@ -391,7 +391,7 @@ footer {
     background-color: #e65500;
 }
 
-/* ===== Info Grid Section ===== */
+/* ===== Section Grille d’Infos ===== */
 .info-grid {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
@@ -430,13 +430,13 @@ footer {
     font-size: 1rem;
 }
 
-/* Hover effect */
+/* Effet au survol */
 .grid-item:hover {
     transform: translateY(-5px);
     box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
 }
 
-/* Responsive adjustments */
+/* Ajustements responsives */
 @media (max-width: 600px) {
     .newsletter form {
         flex-direction: column;
@@ -449,7 +449,7 @@ footer {
     }
 }
 
-/* ===== Trips Page ===== */
+/* ===== Page Trips ===== */
 .trips-intro {
     text-align: center;
     padding: 50px 20px;
@@ -507,7 +507,7 @@ footer {
     box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
 }
 
-/* Trip Table */
+/* Tableau des Trips */
 .trips-table-section {
     padding: 50px 20px;
     background-color: #fff;
@@ -541,7 +541,7 @@ footer {
     background-color: #f2f2f2;
 }
 
-/* Call-to-action button */
+/* Bouton d’action */
 .btn-cta {
     display: inline-block;
     padding: 10px 25px;
@@ -556,36 +556,147 @@ footer {
     background-color: #e65500;
 }
 
-/* Responsive Table */
+/* ===============================
+   OPTIMISATION MOBILE POUR TABLEAU & FOOTER
+   =============================== */
 @media (max-width: 600px) {
 
-    .trips-table,
-    .trips-table thead,
-    .trips-table tbody,
-    .trips-table th,
-    .trips-table td,
-    .trips-table tr {
+    /* ===== Section Tableau des Trips ===== */
+    .trips-table-section {
+        padding: 20px 10px;
+    }
+
+    .trips-table-section h2 {
+        font-size: 1.4rem;
+        margin-bottom: 15px;
+    }
+
+    .trips-table {
+        width: 100%;
+        border: 0;
         display: block;
     }
 
-    .trips-table th {
-        position: absolute;
-        top: -9999px;
-        left: -9999px;
+    .trips-table thead {
+        display: none;
+        /* cacher les en-têtes du tableau */
+    }
+
+    .trips-table tbody tr {
+        display: block;
+        margin-bottom: 15px;
+        border: 1px solid #ccc;
+        border-radius: 8px;
+        padding: 10px;
+        background-color: #f9f9f9;
     }
 
     .trips-table td {
+        display: flex;
+        justify-content: space-between;
+        padding: 5px 10px;
         border: none;
-        position: relative;
-        padding-left: 50%;
-        text-align: left;
+        font-size: 0.95rem;
     }
 
     .trips-table td:before {
         content: attr(data-label);
-        position: absolute;
-        left: 15px;
         font-weight: bold;
         color: #004080;
+        flex: 1;
+    }
+
+    /* Attribution dynamique des data-labels */
+    .trips-table td:nth-child(1):before {
+        content: "Trip Name";
+    }
+
+    .trips-table td:nth-child(2):before {
+        content: "Duration";
+    }
+
+    .trips-table td:nth-child(3):before {
+        content: "Difficulty";
+    }
+
+    .trips-table td:nth-child(4):before {
+        content: "Price";
+    }
+
+    /*  Pied de page  */
+    footer {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+        gap: 15px;
+        padding: 1rem 10px;
+    }
+
+    footer p {
+        font-size: 0.9rem;
+    }
+
+    .socialmedia {
+        justify-content: center;
+        gap: 10px;
+    }
+
+    .socialmedia img {
+        width: 28px;
+        height: 28px;
+    }
+}
+
+/* ===============================
+   Section Newsletter - Mobile Professionnel
+   =============================== */
+@media (max-width: 600px) {
+    .newsletter {
+        padding: 30px 15px;
+        /* moins haut que sur desktop */
+    }
+
+    .newsletter h3 {
+        font-size: 1.5rem;
+        /* texte plus petit pour mobile */
+        margin-bottom: 15px;
+        color: #004080;
+    }
+
+    .newsletter form {
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+        /* espacement confortable */
+        max-width: 100%;
+        margin: 0 auto;
+    }
+
+    .newsletter input[type="text"],
+    .newsletter input[type="email"] {
+        width: 100%;
+        padding: 10px 12px;
+        /* taille confortable mais pas énorme */
+        font-size: 1rem;
+        /* lisible sans être trop grand */
+        border: 1px solid #ccc;
+        border-radius: 5px;
+    }
+
+    .newsletter button {
+        width: 100%;
+        padding: 10px 15px;
+        /* plus professionnel et uniforme */
+        font-size: 1rem;
+        background-color: #ff6600;
+        color: white;
+        border: none;
+        border-radius: 5px;
+        cursor: pointer;
+        transition: background-color 0.3s;
+    }
+
+    .newsletter button:hover {
+        background-color: #e65500;
     }
 }
