@@ -360,7 +360,7 @@ footer {
 
 .newsletter input[type="text"],
 .newsletter input[type="email"] {
-    flex: 1 1 200px;
+
     /* croître, rétrécir, largeur minimale */
     padding: 12px 15px;
     border: 2px solid #ccc;
@@ -436,16 +436,43 @@ footer {
     box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
 }
 
-/* Ajustements responsives */
-@media (max-width: 600px) {
+/* ===== Newsletter Compact Mobile ===== */
+@media (max-width: 768px) {
+
+    .newsletter h3 {
+        font-size: 16px;
+        margin-bottom: 8px;
+    }
+
     .newsletter form {
+        display: flex;
         flex-direction: column;
-        gap: 10px;
+        gap: 6px;
     }
 
     .newsletter input,
     .newsletter button {
         width: 100%;
+        padding: 6px 8px;
+        /* plus petit */
+        font-size: 13px;
+        /* texte plus fin */
+        height: 40px;
+        /* hauteur contrôlée */
+        border-radius: 3px;
+        border: 1px solid #ccc;
+        box-sizing: border-box;
+    }
+
+    .newsletter button {
+        background-color: #700ef0;
+        color: #fff;
+        font-weight: 500;
+        cursor: pointer;
+    }
+
+    .newsletter button:hover {
+        background-color: #230edd;
     }
 }
 
@@ -554,149 +581,4 @@ footer {
 
 .btn-cta:hover {
     background-color: #e65500;
-}
-
-/* ===============================
-   OPTIMISATION MOBILE POUR TABLEAU & FOOTER
-   =============================== */
-@media (max-width: 600px) {
-
-    /* ===== Section Tableau des Trips ===== */
-    .trips-table-section {
-        padding: 20px 10px;
-    }
-
-    .trips-table-section h2 {
-        font-size: 1.4rem;
-        margin-bottom: 15px;
-    }
-
-    .trips-table {
-        width: 100%;
-        border: 0;
-        display: block;
-    }
-
-    .trips-table thead {
-        display: none;
-        /* cacher les en-têtes du tableau */
-    }
-
-    .trips-table tbody tr {
-        display: block;
-        margin-bottom: 15px;
-        border: 1px solid #ccc;
-        border-radius: 8px;
-        padding: 10px;
-        background-color: #f9f9f9;
-    }
-
-    .trips-table td {
-        display: flex;
-        justify-content: space-between;
-        padding: 5px 10px;
-        border: none;
-        font-size: 0.95rem;
-    }
-
-    .trips-table td:before {
-        content: attr(data-label);
-        font-weight: bold;
-        color: #004080;
-        flex: 1;
-    }
-
-    /* Attribution dynamique des data-labels */
-    .trips-table td:nth-child(1):before {
-        content: "Trip Name";
-    }
-
-    .trips-table td:nth-child(2):before {
-        content: "Duration";
-    }
-
-    .trips-table td:nth-child(3):before {
-        content: "Difficulty";
-    }
-
-    .trips-table td:nth-child(4):before {
-        content: "Price";
-    }
-
-    /*  Pied de page  */
-    footer {
-        flex-direction: column;
-        align-items: center;
-        text-align: center;
-        gap: 15px;
-        padding: 1rem 10px;
-    }
-
-    footer p {
-        font-size: 0.9rem;
-    }
-
-    .socialmedia {
-        justify-content: center;
-        gap: 10px;
-    }
-
-    .socialmedia img {
-        width: 28px;
-        height: 28px;
-    }
-}
-
-/* ===============================
-   Section Newsletter - Mobile Professionnel
-   =============================== */
-@media (max-width: 600px) {
-    .newsletter {
-        padding: 30px 15px;
-        /* moins haut que sur desktop */
-    }
-
-    .newsletter h3 {
-        font-size: 1.5rem;
-        /* texte plus petit pour mobile */
-        margin-bottom: 15px;
-        color: #004080;
-    }
-
-    .newsletter form {
-        display: flex;
-        flex-direction: column;
-        gap: 10px;
-        /* espacement confortable */
-        max-width: 100%;
-        margin: 0 auto;
-    }
-
-    .newsletter input[type="text"],
-    .newsletter input[type="email"] {
-        width: 100%;
-        padding: 10px 12px;
-        /* taille confortable mais pas énorme */
-        font-size: 1rem;
-        /* lisible sans être trop grand */
-        border: 1px solid #ccc;
-        border-radius: 5px;
-    }
-
-    .newsletter button {
-        width: 100%;
-        padding: 10px 15px;
-        /* plus professionnel et uniforme */
-        font-size: 1rem;
-        background-color: #ff6600;
-        color: white;
-        border: none;
-        border-radius: 5px;
-        cursor: pointer;
-        transition: background-color 0.3s;
-    }
-
-    .newsletter button:hover {
-        background-color: #e65500;
-    }
 }
