@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formulaire</title>
+    <link rel="stylesheet" href="styles/poll-form.css">
+</head>
+
+<body>
+    <main>
+
+        <form>
+
+            <h2>Contact à soumettre</h2>
+
+            <!-- Premier groupe -->
+            <fieldset>
+                <legend>Informations personnelles</legend>
+
+                <label for="full-name">Nom complet</label>
+                <input type="text" id="full-name" name="full-name" required>
+
+                <label for="email">Email</label>
+                <input type="email" id="email" name="email" required>
+
+                <label for="choice">Navigateur préféré</label>
+                <select id="choice" name="choice">
+                    <option value="chrome">Chrome</option>
+                    <option value="opera">Opera</option>
+                    <option value="edge">Edge</option>
+                    <option value="google">Google</option>
+                </select>
+            </fieldset>
+
+            <!-- Deuxième groupe -->
+            <fieldset>
+                <legend>Questions</legend>
+
+                <label for="pet">
+                    <input type="checkbox" id="pet" name="pet">
+                    Avez-vous un animal de compagnie ?
+                </label>
+
+                <label for="feedback">Endroits où vous avez vécu</label>
+                <textarea id="feedback" name="feedback" rows="5"
+                  placeholder="Énumérez exactement les endroits vécus"></textarea>
+            </fieldset>
+
+            <button type="submit">Envoyer</button>
+
+        </form>
+
+    </main>
+</body>
+
+</html>
