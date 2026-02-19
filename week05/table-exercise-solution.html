@@ -3,58 +3,207 @@
 
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Table Exercise</title>
-    <link rel="stylesheet" href="styles/table-exercise-solution.css">
+    <title>CV - Jiresse Lusa</title>
+    <link rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap"
+      rel="stylesheet">
+    <link rel="stylesheet" href="styles/style.css">
+
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/html2pdf.js/0.10.1/html2pdf.bundle.min.js"></script>
 </head>
 
 <body>
-    <h1>Table Exercise Example Solution</h1>
-    <table>
-        <thead>
-            <tr>
-                <th>League</th>
-                <th>Team</th>
-                <th>Record</th>
-                <th>Player Count</th>
-            </tr>
-        </thead>
-        <tbody>
-            <tr>
-                <th rowspan="2">Southern</th>
-                <td>Parana</td>
-                <td>52-19</td>
-                <td>23</td>
-            </tr>
-            <tr>
-                <td>Catarina</td>
-                <td>49-24</td>
-                <td>10</td>
-            </tr>
-            <tr>
-                <th rowspan="3">Western</th>
-                <td>Lacerda</td>
-                <td>92-70</td>
-                <td>27</td>
-            </tr>
-            <tr>
-                <td>Acre</td>
-                <td>75-87</td>
-                <td>20</td>
-            </tr>
-            <tr>
-                <td>Rondonia</td>
-                <td>10-7</td>
-                <td>12</td>
-            </tr>
-        </tbody>
-        <tfoot>
-            <tr>
-                <th colspan="3">Total Players</th>
-                <td>92</td>
-            </tr>
-        </tfoot>
-    </table>
+
+    <div>
+        <button onclick="downloadPDF()">Download PDF</button>
+
+        <div class="cv" id="cv">
+
+            <!-- CARTE PHOTO PROFIL -->
+            <div class="profile-card">
+                <div class="profile-photo-container">
+                    <img src="image/profile.png" alt="Profile Photo">
+                </div>
+                <div class="profile-name">Jiresse Lusa</div>
+                <div class="profile-title">Founder & Trainer</div>
+            </div>
+
+            <!-- CARTE CONTACTS -->
+            <div class="contact-card">
+                <div class="contact-container">
+
+                    <div class="contact-block">
+                        <p><i class="fas fa-envelope"></i>
+                            <a href="mailto:jiresselusa127@gmail.com">jiresselusa127@gmail.com</a>
+                        </p>
+
+                        <p><i class="fas fa-phone"></i>
+                            <a href="tel:+243995271831">+243 995 271 831</a>
+                        </p>
+
+                        <p><i class="fab fa-github"></i>
+                            <a href="https://github.com/formationWeb-Lus"
+                              target="_blank">https://github.com/formationWeb</a>
+                        </p>
+                    </div>
+
+                    <div class="contact-block">
+                        <p><i class="fab fa-linkedin"></i>
+                            <a href="https://www.linkedin.com/in/jiresse-lusa"
+                              target="_blank">LinkedIn jiresse-lusa</a>
+                        </p>
+
+                        <p><i class="fas fa-globe"></i>
+                            <a href="https://coderise-ecole-k8nt.vercel.app/"
+                              target="_blank">coderise-ecole
+                            </a>
+                        </p>
+                    </div>
+
+                </div>
+            </div>
+
+
+            <div class="section">
+                <div class="section-title">Summary</div>
+                <div class="section-content">
+                    <p>
+                        Dynamic Founder & Trainer with a focus on web development and over 2 years
+                        of experience in training and development. Successfully designed and
+                        delivered programs to over 200 students across Africa while managing a
+                        full-stack online learning platform. Proven expertise in modern technologies
+                        such as Next.js and REST APIs. Committed to empowering learners with
+                        practical skills to meet industry demands.
+                    </p>
+                </div>
+            </div>
+
+            <!-- WORK EXPERIENCE -->
+            <div class="section">
+                <div class="section-title">Work Experience</div>
+                <div class="section-Experience">
+
+                    <h3>Founder & Trainer – Coderise-Ecole</h3>
+                    <ul>
+                        <li>Engineered and delivered professional web development training programs.
+                        </li>
+                        <li>Instructed over 200 students across Africa.</li>
+                        <li>Developed and managed a full-stack learning platform.</li>
+                        <li>Integrated Next.js, Prisma, and REST APIs.</li>
+                    </ul>
+
+                    <h3>Materials Management Supervisor – Naisa Engineering</h3>
+                    <ul>
+                        <li>Oversaw inventory systems and procurement workflows.</li>
+                        <li>Coordinated logistics and reporting processes.</li>
+                    </ul>
+
+                    <h3>Freelance Web Developer</h3>
+                    <ul>
+                        <li>Designed and developed websites and full-stack applications for SMEs.
+                        </li>
+                        <li>Delivered tailored WordPress and custom solutions.</li>
+                        <li>Completed projects via Upwork and Fiverr.</li>
+                    </ul>
+
+                </div>
+            </div>
+
+            <!-- EDUCATION -->
+            <div class="section">
+                <div class="section-title">Education</div>
+                <div class="section-content">
+                    <h3>Bachelor’s Degree - Software Development</h3>
+                    <p>Brigham Young University • USA</p>
+                </div>
+            </div>
+
+            <!-- SKILLS -->
+            <div class="section">
+                <div class="section-title">Skills</div>
+                <div class="section-content skills">
+                    <span>HTML / CSS</span>
+                    <span>JavaScript / Typescript</span>
+                    <span>Next.js / React</span>
+                    <span>Node.js / Express</span>
+                    <span>Prisma ORM</span>
+                    <span>MongoDB / SQL / PostgreSQL</span>
+                    <span>Python</span>
+                    <span>C#</span>
+                    <span>Git / GitHub / VS Code / Render</span>
+                    <span>Digital Marketing</span>
+                </div>
+            </div>
+
+            <!-- LANGUAGES -->
+            <div class="section">
+                <div class="section-title">Languages</div>
+                <div class="section-content languages">
+
+                    <div class="language">
+                        <div class="language-name">French</div>
+                        <div class="level-text">Native</div>
+                        <div class="progress-bar">
+                            <div class="progress" style="width:100%;"></div>
+                        </div>
+                    </div>
+
+                    <div class="language">
+                        <div class="language-name">English</div>
+                        <div class="level-text">Intermediate</div>
+                        <div class="progress-bar">
+                            <div class="progress" style="width:60%;"></div>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+
+            <!-- CERTIFICATES -->
+            <div class="section">
+                <div class="section-title">Certificates</div>
+                <div class="section-content">
+
+                    <div class="cert-title">Web & Computer Programming Certificate</div>
+                    <p>Brigham Young University</p>
+
+                    <div class="cert-title">Web Development Certificate</div>
+                    <p>Brigham Young University</p>
+
+                    <div class="cert-title">Software Development Certificate</div>
+                    <p>Brigham Young University</p>
+
+                    <div class="cert-title">QuickBooks Online</div>
+                    <p>Brigham Young University</p>
+
+                    <div class="cert-title">PathwayConnect</div>
+                    <p>Brigham Young University</p>
+
+                    <div class="cert-title">EnglishConnect 3</div>
+                    <p>Brigham Young University</p>
+
+                </div>
+            </div>
+
+        </div>
+    </div>
+
+    <script>
+        function downloadPDF() {
+            const element = document.getElementById("cv");
+            const opt = {
+                margin: 0,
+                filename: 'Jiresse_Lusa_CV.pdf',
+                image: { type: 'jpeg', quality: 1 },
+                html2canvas: { scale: 3 },
+                jsPDF: { unit: 'in', format: 'a4', orientation: 'portrait' }
+            };
+            html2pdf().set(opt).from(element).save();
+        }
+    </script>
+
 </body>
 
 </html>

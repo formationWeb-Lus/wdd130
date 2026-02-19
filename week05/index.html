@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Motivation Letter - Jiresse Lusa</title>
+
+    <!-- Font Awesome -->
+    <link rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+
+    <!-- Google font -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap"
+      rel="stylesheet">
+
+    <!-- Même fichier CSS que le CV -->
+    <link rel="stylesheet" href="styles/style.css">
+
+    <!-- Librairie PDF -->
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/html2pdf.js/0.10.1/html2pdf.bundle.min.js"></script>
+</head>
+
+<body>
+
+    <div>
+
+        <button onclick="downloadPDF()">Download PDF</button>
+
+        <div class="cv" id="letter">
+
+            <!-- HEADER / IDENTITÉ -->
+            <div class="profile-card">
+                <div class="profile-name">Jiresse Lusa</div>
+                <div class="profile-title">Founder • Trainer • Web Developer</div>
+            </div>
+
+            <!-- CONTACTS -->
+            <div class="contact-card">
+                <div class="contact-container">
+
+                    <div class="contact-block">
+                        <p><i class="fas fa-envelope"></i>
+                            jiresselusa127@gmail.com</p>
+
+                        <p><i class="fas fa-phone"></i>
+                            +243 995 271 831</p>
+                    </div>
+
+                    <div class="contact-block">
+                        <p><i class="fab fa-linkedin"></i>
+                            linkedin.com/in/jiresse-lusa</p>
+
+                        <p><i class="fas fa-globe"></i>
+                            coderise-ecole-k8nt.vercel.app</p>
+                    </div>
+
+                </div>
+            </div>
+
+            <!-- LETTRE -->
+            <div class="section">
+                <div class="section-title">Motivation Letter</div>
+
+                <div class="section-content">
+
+                    <p><strong>Dear Hiring Manager,</strong></p>
+
+                    <p>
+                        I am writing to express my strong interest in joining your
+                        organization as a Web Developer, Trainer, or Technology
+                        Specialist. With a background in software development and
+                        over two years of experience training learners across Africa,
+                        I am passionate about using technology to create impact and
+                        opportunities.
+                    </p>
+
+                    <p>
+                        As the Founder of an online learning platform, I have designed
+                        and delivered practical training programs in modern web
+                        technologies, helping more than 200 students acquire
+                        job-ready digital skills. This experience strengthened my
+                        leadership, communication, and project management abilities.
+                    </p>
+
+                    <p>
+                        My technical expertise includes full-stack web development,
+                        REST APIs, database systems, and modern frameworks such as
+                        React and Next.js. Beyond technical skills, I am disciplined,
+                        adaptable, and committed to continuous improvement.
+                    </p>
+
+                    <p>
+                        I am particularly motivated to contribute to an organization
+                        that values innovation, education, and real-world impact. I
+                        believe my combination of teaching experience, development
+                        skills, and entrepreneurial mindset would allow me to make a
+                        meaningful contribution to your team.
+                    </p>
+
+                    <p>
+                        I would welcome the opportunity to discuss how my skills and
+                        experience align with your needs. Thank you for your time and
+                        consideration.
+                    </p>
+
+                    <p style="margin-top:30px;">
+                        <strong>Sincerely,</strong><br><br>
+                        Jiresse Lusa
+                    </p>
+
+                </div>
+            </div>
+
+        </div>
+    </div>
+
+    <script>
+        function downloadPDF() {
+            const element = document.getElementById("letter");
+            const opt = {
+                margin: 0,
+                filename: 'Jiresse_Lusa_Motivation_Letter.pdf',
+                image: { type: 'jpeg', quality: 1 },
+                html2canvas: { scale: 3 },
+                jsPDF: { unit: 'in', format: 'a4', orientation: 'portrait' }
+            };
+            html2pdf().set(opt).from(element).save();
+        }
+    </script>
+
+</body>
+
+</html>

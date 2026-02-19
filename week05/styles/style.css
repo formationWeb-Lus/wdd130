@@ -1,0 +1,255 @@
+:root {
+    --primary: #1a1a1a;
+    --violet: #a04e0adf;
+    --yellow: #f5e7f1;
+}
+
+.header {
+    display: flex;
+    flex-direction: column;
+    /* photo en haut, contacts en dessous */
+    align-items: center;
+    /* centre horizontalement tout */
+    padding: 30px 0;
+}
+
+/* ----------------------- */
+/* CARTE PHOTO PROFIL       */
+/* ----------------------- */
+.profile-card {
+    width: 95%;
+    padding: 20px;
+    background-color: #f0e4f0;
+    border-radius: 1px;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    margin: 40px auto;
+    /* centré horizontalement */
+}
+
+.profile-photo-container {
+    width: 120px;
+    height: 120px;
+    border-radius: 50%;
+    overflow: hidden;
+    border: 3px solid var(--violet);
+    margin-bottom: 15px;
+}
+
+.profile-photo-container img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.profile-name {
+    font-size: 18px;
+    font-weight: 700;
+    color: var(--violet);
+    margin-bottom: 5px;
+}
+
+.profile-title {
+    font-size: 14px;
+    font-weight: 500;
+    color: #555;
+}
+
+/* ----------------------- */
+/* CARTE CONTACTS           */
+/* ----------------------- */
+.contact-card {
+    width: 70%;
+    max-width: 850px;
+    margin: 30px auto;
+    padding: 20px;
+
+}
+
+.contact-container {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 40px;
+}
+
+.contact-block {
+    text-align: left;
+    font-size: 13px;
+}
+
+.contact-block i {
+    color: var(--violet);
+    margin-right: 6px;
+}
+
+body {
+    margin: 0;
+    font-family: 'Inter', sans-serif;
+    background-color: #f0e4f0;
+    display: flex;
+    justify-content: center;
+}
+
+.cv {
+    width: 850px;
+    background: #f8f8f8;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+}
+
+.header {
+    display: flex;
+    padding: 30px;
+    align-items: center;
+}
+
+.photo {
+    width: 130px;
+    height: 130px;
+    border-radius: 50%;
+    object-fit: cover;
+    margin-right: 30px;
+}
+
+.contact-container {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+}
+
+.contact-block {
+    font-size: 13px;
+    line-height: 1.6;
+}
+
+.section-title {
+    width: 30%;
+    background: var(--violet);
+    color: white;
+    padding: 10px;
+    font-weight: 600;
+    align-items: center;
+}
+
+.section-title {
+    display: flex;
+    justify-content: center;
+    font-size: 20px;
+}
+
+.section-content {
+    width: 89%;
+    padding: 20px 30px;
+    font-size: 15px;
+
+}
+
+.section-Experience {
+
+    width: 100%;
+    padding: 20px 30px;
+    font-size: 15px;
+
+}
+
+h3 {
+    margin: 10px 0 5px 0;
+}
+
+p,
+li {
+    font-size: 15px;
+    line-height: 1.6;
+    color: var(--primary);
+}
+
+ul {
+    padding-left: 18px;
+}
+
+.skills span {
+    background: var(--yellow);
+    padding: 4px 8px;
+    border-radius: 4px;
+    margin: 4px;
+    display: inline-block;
+    font-size: 12px;
+}
+
+.section-content.languages {
+    display: flex;
+    justify-content: space-between;
+    gap: 40px;
+}
+
+.language {
+    width: 45%;
+}
+
+.language-name {
+    font-weight: 600;
+    margin-bottom: 5px;
+    color: var(--primary);
+}
+
+.level-text {
+    font-size: 12px;
+    margin-bottom: 5px;
+    color: var(--violet);
+    font-weight: bold;
+}
+
+.progress-bar {
+    width: 100%;
+    height: 8px;
+    background: #e0e0e0;
+    border-radius: 10px;
+    overflow: hidden;
+}
+
+.progress {
+    height: 100%;
+    background: var(--violet);
+    border-radius: 10px;
+}
+
+.cert-title {
+    font-weight: 600;
+    margin-top: 8px;
+}
+
+button {
+    margin: 20px;
+    padding: 10px 20px;
+    background: var(--violet);
+    color: white;
+    border: none;
+    cursor: pointer;
+}
+
+@media print {
+    button {
+        display: none;
+    }
+
+    body {
+        background: white;
+    }
+}
+
+/* ----------------------- */
+/* LETTER OF RECOMMENDATION */
+/* ----------------------- */
+
+.recommendation p {
+    margin-bottom: 14px;
+    text-align: justify;
+}
+
+.signature {
+    margin-top: 30px;
+    font-size: 14px;
+}
