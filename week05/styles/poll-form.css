@@ -1,0 +1,291 @@
+ * {
+     margin: 0;
+     padding: 0;
+     box-sizing: border-box;
+ }
+
+ body {
+     font-family: Arial, Helvetica, sans-serif;
+     background-color: #f4f6f9;
+ }
+
+ /* HEADER */
+ header {
+     display: flex;
+     justify-content: space-between;
+     align-items: center;
+     background-color: #111;
+     padding: 15px 40px;
+ }
+
+ .logo img {
+     width: 120px;
+ }
+
+ nav ul {
+     list-style: none;
+     display: flex;
+     gap: 20px;
+ }
+
+ nav a {
+     text-decoration: none;
+     color: white;
+     font-weight: 600;
+     transition: 0.3s;
+ }
+
+ nav a:hover {
+     color: #00bcd4;
+ }
+
+ /* TITRE */
+ h1 {
+     text-align: center;
+     margin: 40px 0;
+     color: #222;
+ }
+
+ /* SECTION */
+ .section {
+     display: flex;
+     justify-content: center;
+     padding: 20px;
+ }
+
+ /* TABLE */
+ table {
+     border-collapse: collapse;
+     width: 80%;
+     max-width: 900px;
+     background: white;
+     box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+ }
+
+ thead {
+     background-color: #000;
+     color: white;
+ }
+
+ th,
+ td {
+     padding: 12px;
+     border: 1px solid #ccc;
+     text-align: center;
+ }
+
+ tbody tr:nth-child(even) {
+     background-color: #f2f2f2;
+ }
+
+ tbody tr:hover {
+     background-color: #e0f7fa;
+     transition: 0.3s;
+ }
+
+ tfoot {
+     background-color: #000;
+     color: white;
+     font-weight: bold;
+ }
+
+ /* ============================= */
+ /* RESET GENERAL */
+ /* ============================= */
+
+ * {
+     margin: 0;
+     padding: 0;
+     box-sizing: border-box;
+ }
+
+ body {
+     font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+     background: linear-gradient(135deg, #0f2027, #203a43, #2c5364);
+     color: #333;
+     min-height: 100vh;
+     display: flex;
+     flex-direction: column;
+ }
+
+ /* ============================= */
+ /* HEADER */
+ /* ============================= */
+
+ header {
+     display: flex;
+     justify-content: space-between;
+     align-items: center;
+     padding: 20px 60px;
+     background: rgba(0, 0, 0, 0.85);
+     backdrop-filter: blur(8px);
+     box-shadow: 0 4px 15px rgba(0, 0, 0, 0.4);
+ }
+
+ .logo img {
+     width: 140px;
+ }
+
+ /* NAVIGATION */
+
+ nav ul {
+     list-style: none;
+     display: flex;
+     gap: 35px;
+ }
+
+ nav a {
+     text-decoration: none;
+     color: white;
+     font-weight: 600;
+     font-size: 15px;
+     letter-spacing: 1px;
+     transition: all 0.3s ease;
+     position: relative;
+ }
+
+ /* Effet underline animé */
+ nav a::after {
+     content: "";
+     position: absolute;
+     width: 0%;
+     height: 2px;
+     left: 0;
+     bottom: -5px;
+     background-color: #00e5ff;
+     transition: 0.3s ease;
+ }
+
+ nav a:hover::after {
+     width: 100%;
+ }
+
+ nav a:hover {
+     color: #00e5ff;
+ }
+
+ /* ============================= */
+ /* MAIN CONTENT */
+ /* ============================= */
+
+ main {
+     flex: 1;
+     padding: 60px 20px;
+     display: flex;
+     flex-direction: column;
+     align-items: center;
+ }
+
+ h1 {
+     color: white;
+     margin-bottom: 40px;
+     font-size: 32px;
+     letter-spacing: 1px;
+ }
+
+ /* ============================= */
+ /* TABLE SECTION */
+ /* ============================= */
+
+ .table-section {
+     width: 100%;
+     display: flex;
+     justify-content: center;
+ }
+
+ table {
+     width: 85%;
+     max-width: 1000px;
+     border-collapse: collapse;
+     background: white;
+     border-radius: 12px;
+     overflow: hidden;
+     box-shadow: 0 15px 40px rgba(0, 0, 0, 0.3);
+ }
+
+ /* THEAD */
+ thead {
+     background: linear-gradient(90deg, #141e30, #243b55);
+     color: white;
+ }
+
+ th {
+     padding: 18px;
+     text-transform: uppercase;
+     font-size: 14px;
+     letter-spacing: 1px;
+ }
+
+ /* TD */
+ td {
+     padding: 16px;
+     text-align: center;
+     font-size: 15px;
+ }
+
+ /* Lignes alternées */
+ tbody tr:nth-child(even) {
+     background-color: #f4f6f9;
+ }
+
+ /* Hover effet premium */
+ tbody tr {
+     transition: 0.3s ease;
+ }
+
+ tbody tr:hover {
+     background-color: #e0f7fa;
+     transform: scale(1.01);
+ }
+
+ /* TFOOT */
+ tfoot {
+     background: #111;
+     color: white;
+     font-weight: bold;
+ }
+
+ tfoot td {
+     padding: 18px;
+ }
+
+ /* ============================= */
+ /* FOOTER */
+ /* ============================= */
+
+ footer {
+     text-align: center;
+     padding: 20px;
+     background: rgba(0, 0, 0, 0.9);
+     color: white;
+     font-size: 14px;
+     letter-spacing: 1px;
+ }
+
+ /* ============================= */
+ /* RESPONSIVE DESIGN */
+ /* ============================= */
+
+ @media (max-width: 768px) {
+
+     header {
+         flex-direction: column;
+         gap: 15px;
+         padding: 20px;
+     }
+
+     nav ul {
+         flex-direction: column;
+         gap: 15px;
+         text-align: center;
+     }
+
+     table {
+         width: 95%;
+     }
+
+     h1 {
+         font-size: 24px;
+         text-align: center;
+     }
+ }
